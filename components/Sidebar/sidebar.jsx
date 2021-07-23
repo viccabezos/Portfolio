@@ -4,21 +4,21 @@ export default function SideBar() {
       <div className="fixed flex flex-col space-y-7 p-5 justify-center  ml-4">
         <button>
           <div className="border-b pb-2">
-            <a className="" href="/">
+            <a className="hover:bg-gray-800  hover:font-bold" href="/">
               Home page
             </a>
           </div>
         </button>
         <button>
           <div className="border-b pb-2">
-            <a className="" href="/portfolio">
+            <a className="hover:bg-gray-800  hover:font-bold" href="/portfolio">
               Portfolio
             </a>
           </div>
         </button>
         <button>
           <div className="border-b pb-2">
-            <a className="" href="/cv">
+            <a className="hover:bg-gray-800  hover:font-bold" href="/cv">
               CV
             </a>
           </div>

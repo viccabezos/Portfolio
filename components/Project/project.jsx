@@ -13,16 +13,21 @@ export default function Project({ name, description, github, id }) {
     project.getPictures(id)
   );
 
+  const { data: formation } = useQuery(["formationProjects", id], () =>
+    project.getFormation(id)
+  );
+
   useEffect(() => {
     console.log(stacks);
   });
 
   return (
-    <div className="portfolio flex flex-col justify-center h-auto mb-10 w-full">
-      <div className="flex m-10 justify-center ">
-        <div className="border border-gray-600 rounded-md h-80 w-1/2 px-8 py-4">
-          <p className="text-lg font-bold">{name}</p>
+    <div className="portfolio flex flex-col justify-center h-auto mb-5 w-full">
+      <div className="flex m-5 justify-center ">
+        <div className="border border-gray-400 rounded-md h-64 w-1/2 px-8 py-4 hover:ring-4 hover:ring-gray-400">
+          <p className="text-2xl font-bold">{name}</p>
           <p className="text-sm font-light">{description}</p>
+          <p>{formation?.name}</p>
 
           <div>
             {pictures?.map((picture) => {
@@ -40,7 +45,7 @@ export default function Project({ name, description, github, id }) {
           <div>
             {stacks?.map((stack) => {
               return (
-                <div className="flex flex-row">
+                <div className="flex flex-row" key={stack.id}>
                   <p className="text-xs">{stack.name}</p>
                 </div>
               );

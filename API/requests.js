@@ -13,6 +13,9 @@ export const project = {
 
   getPictures: (id) =>
     axios.get(`${API_URL}/projects/${id}/pictures`).then((res) => res.data),
+
+  getFormation: (id) =>
+    axios.get(`${API_URL}/projects/${id}/formations`).then((res) => res.data),
 };
 export const company = {
   getAll: () => axios.get(`${API_URL}/companies`).then((res) => res.data),
@@ -25,6 +28,9 @@ export const job = {
   getAll: () => axios.get(`${API_URL}/jobs`).then((res) => res.data),
 
   getOne: (id) => axios.get(`${API_URL}/jobs/${id}`).then((res) => res.data),
+
+  getCompanies: (id) =>
+    axios.get(`${API_URL}/jobs/${id}/companies`).then((res) => res.data),
 };
 export const stack = {
   getAll: () => axios.get(`${API_URL}/stacks`).then((res) => res.data),
