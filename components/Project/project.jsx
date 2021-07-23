@@ -24,7 +24,7 @@ export default function Project({ name, description, github, id }) {
   return (
     <div className="portfolio flex flex-col justify-center h-auto mb-5 w-full">
       <div className="flex m-5 justify-center ">
-        <div className="border border-gray-400 rounded-md h-64 w-1/2 px-8 py-4 hover:ring-4 hover:ring-gray-400">
+        <div className="border border-gray-400 shadow-xl rounded-md h-64 w-1/2 px-8 py-4 hover:ring-4 hover:ring-gray-400">
           <p className="text-2xl font-bold">{name}</p>
           <p className="text-sm font-light">{description}</p>
           <p>{formation?.name}</p>
